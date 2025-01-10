@@ -1,0 +1,57 @@
+.btn {
+  font-family: "Comfortaa";
+  background-color: darkcyan;
+  color: white;
+  border-color: darkcyan;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 200ms;
+}
+
+.btn:hover {
+  scale: 1.02;
+}
+
+.btn > img {
+  height: 24px;
+  width: auto;
+}
+
+.btn_dialog {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 0 16px 0 0;
+  border-width: 0;
+  border-radius: 8px;
+  height: auto;
+  width: 36px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+
+.btn_dialog:hover {
+    scale: 1.2;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8a9daf; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 117, 206); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkcyan; 
+}

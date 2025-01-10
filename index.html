@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+
+    <script src="./sript.js" defers></script>
+    <script src="./scripts/templates.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style/assets.css" />
+    <link rel="stylesheet" href="./style/note.css" />
+    <link rel="stylesheet" href="./style/standard.css" />
+    <link rel="stylesheet" href="./style/fonts.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body onload="init()">
+    <header>
+      <h1>Notizblock</h1>
+    </header>
+    <main>
+      <!-- Notes Add Section -->
+      <div class="notes_container">
+        <form onsubmit="addNote(); return false" class="notes_form">
+          <input
+            id="note_title_input"
+            type="text"
+            placeholder="Titel"
+            autofocus
+          />
+          <textarea id="note_input" type="text" placeholder="Notiz"></textarea>
+          <div class="button_container">
+            <button class="btn">Notiz speichern</button>
+          </div>
+        </form>
+      </div>
+      <!-- Overview Section -->
+      <!-- Notes Section -->
+      <div class="overview_container">
+        <div class="h2_container">
+          <button onclick="openNotesDialog()" class="btn_dialog">
+            <img src="./assets/icons/icon_stickynote.svg"
+              alt="Stickynote Symbol"
+            />
+          </button>
+          <h2>Notizen</h2>
+        </div>
+        <div class="content" id="content"></div>
+
+         <!-- Dialog/Overlay -->
+         <dialog id="overlay_notes" onmousedown="closeNotesDialog(event)">
+          <div class="dialog_flex_container">
+            <div class="h2_container">
+              <div class="btn_dialog">
+                <img src="./assets/icons/icon_stickynote.svg"
+                alt="Stickynote Symbol"
+              />
+              </div>
+              <h2>Notizen</h2>
+            </div>
+            <div class="content" id="content_dialog"></div>
+          </div>
+        </dialog>
+
+        <!-- Trash Section -->
+        <div class="h2_container">
+          <button onclick="openTrashDialog()" class="btn_dialog">
+            <img
+              src="./assets/icons/trash_bin_icon.svg"
+              alt="Papierkorbsymbol"
+            />
+          </button>
+          <h2>Papierkorb</h2>
+        </div>
+        <!-- Dialog/Overlay -->
+        <dialog id="overlay_trash" onmousedown="closeTrashDialog(event)">
+          <div class="dialog_flex_container">
+            <div class="h2_container">
+              <div class="btn_dialog">
+                <img
+                  src="./assets/icons/trash_bin_icon.svg"
+                  alt="Papierkorbsymbol"
+                />
+              </div>
+              <h2>Papierkorb</h2>
+            </div>
+            <div class="content" id="trash_content"></div>
+          </div>
+        </dialog>
+
+        <!-- Archive Section -->
+        <div class="h2_container">
+          <button onclick="openArchiveDialog()" class="btn_dialog">
+            <img src="./assets/icons/folder_icon.svg" alt="Archivsymbol" />
+          </button>
+          <h2>Archiv</h2>
+        </div>
+              <!-- Dialog/Overlay -->
+      <dialog id="overlay_archive" onmousedown="closeArchiveDialog(event)">
+        <div class="dialog_flex_container">
+          <div class="h2_container">
+            <div class="btn_dialog">
+              <img src="./assets/icons/folder_icon.svg" alt="Archivsymbol" />
+            </div>
+            <h2>Archiv</h2>
+          </div>
+          <div class="content" id="archive_content"></div>
+        </div>
+      </dialog>
+      </div>
+
+    </main>
+
+    <!-- Footer Sektion -->
+    <footer>
+      <div class="footer_container">
+        <img
+          class="footer_img"
+          src="./assets/icons/stickyNoteBlue.png"
+          alt="Kleiner Notizzettel in blau"
+        />
+        <p>&#169 2024 by Stephanie Englberger</p>
+      </div>
+    </footer>
+  </body>
+</html>
