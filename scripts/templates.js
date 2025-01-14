@@ -18,7 +18,7 @@ function getTrashNoteTemplate(indexTrashNote) {
           <p>${allNotes.trashNotes[indexTrashNote]}</p>
           <div class="notes_buttons"> 
               <button onclick="deleteNote(${indexTrashNote}, 'trash')">X</button>
-              <button onclick="moveNotes(${indexTrashNote}, 'trash', 'notes')"><img src="assets/icons/icon_stickynote.svg" alt="Folder Icon"></button>
+              <button onclick="moveNotes(${indexTrashNote}, 'trashNotes', 'notes')"><img src="assets/icons/icon_stickynote.svg" alt="Folder Icon"></button>
           </div>
       </div>
       `;
@@ -30,8 +30,8 @@ function getArchiveNoteTemplate(indexArchiveNote) {
         <h3>${allNotes.archiveNotesTitles[indexArchiveNote]}</h3> 
         <p>${allNotes.archiveNotes[indexArchiveNote]}</p>
         <div class="notes_buttons"> 
-            <button onclick="moveNotes(${indexArchiveNote}, 'archive', 'trash')">X</button>
-            <button onclick="moveNotes(${indexArchiveNote}, 'archive', 'notes')"><img src="assets/icons/icon_stickynote.svg" alt="Folder Icon"></button>
+            <button onclick="moveNotes(${indexArchiveNote}, 'archiveNotes', 'trashNotes')">X</button>
+            <button onclick="moveNotes(${indexArchiveNote}, 'archiveNotes', 'notes')"><img src="assets/icons/icon_stickynote.svg" alt="Folder Icon"></button>
         </div>
     </div>
     `;

@@ -15,6 +15,10 @@ function init() {
   getFromLocalStorage("notes", "notesTitles", "notes");
   getFromLocalStorage("trashNotes", "trashNotesTitles", "trash");
   getFromLocalStorage("archiveNotes", "archiveNotesTitles", "archive");
+  renderAllNotes() 
+}
+
+function renderAllNotes() {
   renderNotes();
   renderTrashNotes();
   renderArchiveNotes();
